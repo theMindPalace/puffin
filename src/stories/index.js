@@ -8,6 +8,7 @@ import { Button, Welcome } from '@storybook/react/demo';
 
 import Greeting from '../components/Greeting'
 import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 
@@ -25,3 +26,11 @@ storiesOf('Button', module)
         .add('Example Header',
         () => <Header></Header>
     )
+
+    storiesOf('Footer', module)
+        .add('Example footer',
+        () => <Footer></Footer>
+        )
+        .add('Footer with title ',
+            () => <Footer title="Sarath"/>
+        )
