@@ -1,0 +1,25 @@
+.greet {
+    position: relative;
+    padding: .5rem;
+     background-color: orange;
+     opacity: 0;
+     -webkit-transition: opacity 1s ease-in;
+     -moz-transition: opacity 1s ease-in;
+     transition: opacity 1s ease-in;
+     min-height: 3rem;
+}
+
+.greet.show {
+    opacity: 1;
+}
+.greet__close {
+    border: none;
+    position: absolute;
+    right: 1rem;
+    top: .5rem;
+        border-radius: 50px;
+    text-align: center;
+    font-weight: bold;
+    outline: none;
+    box-shadow: 1px 1px #ccc;
+}
