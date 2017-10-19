@@ -1,0 +1,16 @@
+.bookSearchContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.bookSearchResultContainer {
+    display: flex;
+    height: 100%;
+    overflow: scroll;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+.book-item {
+    min-width: 20%;
+    border: 1px solid #ddd;
+}
