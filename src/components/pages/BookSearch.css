@@ -10,7 +10,25 @@
     padding: 10px;
     flex-wrap: wrap;
 }
-.book-item {
-    min-width: 20%;
-    border: 1px solid #ddd;
+
+.bsInput {
+    padding: 5px;
+    font-size: 20px;
+    outline: none;
+    border: 1px solid #aeaeae;
+    border-radius: 3px;
+}
+
+.bsButton {
+    padding: 6px;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    background-color: #673AB7;
+    color: #ddd;
+    border-radius: 3px;
+}
+
+.bsBtnSearch {
+    margin-left: 5px;
 }

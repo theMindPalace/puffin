@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import api from '../../api';
-
+import BookThumb from '../book-thumb/book-thumb';
 import './BookSearch.css';
 export default class BookSearch extends Component {
 
@@ -62,11 +62,7 @@ export default class BookSearch extends Component {
         if(this.state.searchData && this.state.searchData.items != undefined ) {
 
             return this.state.searchData.items.map((book,i) => {
-
-               return(<div className="book-item" key={i}>
-                    <img src={book.volumeInfo.imageLinks.smallThumbnail} alt=""/>
-                   <div>{book.volumeInfo.title}</div>
-               </div>)
+               return(<BookThumb book={book} key={i}/>)
             })
 
         }
@@ -80,8 +76,8 @@ export default class BookSearch extends Component {
             <div className="bookSearchContainer">
                 <h1>Book Search</h1>
                 <form onSubmit={this.handleSearch}>
-                    <input name="searchText" type="text" onChange={this.handleInputChange.bind(this)} value={this.state.searchText}/>
-                    <button onClick={this.handleSearch}>Search</button>
+                    <input className="bsInput" name="searchText" type="text" onChange={this.handleInputChange.bind(this)} value={this.state.searchText}/>
+                    <button className="bsButton bsBtnSearch" onClick={this.handleSearch}>Search</button>
                 </form>
                <div className="bookSearchResultContainer"> { this.renderBookItems() }</div>
             </div>
